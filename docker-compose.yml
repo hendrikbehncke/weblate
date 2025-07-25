@@ -28,7 +28,7 @@ services:
     env_file:
       - ./environment
     environment:
-      - WEBLATE_SITE_DOMAIN=translate.134.209.253.204.sslip.io
+      - WEBLATE_SITE_DOMAIN=nsc88gcoscgo8wkok0oos04k.134.209.253.204.sslip.io
       - POSTGRES_USER=weblate
       - POSTGRES_PASSWORD=weblate
       - POSTGRES_DB=weblate
