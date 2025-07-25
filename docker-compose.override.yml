@@ -1,10 +1,8 @@
 services:
   database:
-    container_name: weblate-db
     volumes:
       - postgres-data:/var/lib/postgresql/data
   weblate:
-    container_name: weblate
     image: weblate/weblate:5.0
     environment:
       WEBLATE_DEBUG: 0
