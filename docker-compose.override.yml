@@ -1,7 +1,4 @@
 services:
-  database:
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
   weblate:
     image: weblate/weblate:5.0
     environment:
@@ -17,6 +14,3 @@ services:
       WEBLATE_ADMIN_EMAIL: translate@yootheme.com
     ports:
       - 8080:8080
-    volumes:
-      - weblate-data:/app/data
-      - weblate-cache:/app/cache
