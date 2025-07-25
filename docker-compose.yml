@@ -12,6 +12,10 @@ services:
       - postgres-data:/var/lib/postgresql/data
     env_file:
       - ./environment
+    environment:
+      - POSTGRES_USER=weblate
+      - POSTGRES_PASSWORD=weblate
+      - POSTGRES_DB=weblate
     restart: always
   weblate:
     image: weblate/weblate
