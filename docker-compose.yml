@@ -14,7 +14,7 @@ services:
       - ./environment
     restart: always
   weblate:
-    image: weblate/weblate:5.0
+    image: weblate/weblate
     depends_on:
       - cache
       - database
