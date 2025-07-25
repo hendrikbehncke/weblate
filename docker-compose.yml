@@ -29,7 +29,10 @@ services:
       - ./environment
     environment:
       - WEBLATE_SITE_DOMAIN=translate.134.209.253.204.sslip.io
+      - POSTGRES_USER=weblate
+      - POSTGRES_PASSWORD=weblate
       - POSTGRES_DB=weblate
+      - POSTGRES_HOST=database
     restart: always
     read_only: true
     tmpfs:
