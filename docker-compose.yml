@@ -2,32 +2,32 @@ services:
   cache:
     image: redis:8-alpine
     volumes:
-    - redis-data:/data
-    command: [redis-server, --save, '60', '1']
+      - redis-data:/data
+    command: [redis-server, --save, "60", "1"]
     restart: always
     read_only: true
   database:
     image: postgres:17-alpine
     volumes:
-    - postgres-data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     env_file:
-    - ./environment
+      - ./environment
     restart: always
   weblate:
-    image: weblate/weblate
+    image: weblate/weblate:5.0
     depends_on:
-    - cache
-    - database
+      - cache
+      - database
     volumes:
-    - weblate-data:/app/data
-    - weblate-cache:/app/cache
+      - weblate-data:/app/data
+      - weblate-cache:/app/cache
     env_file:
-    - ./environment
+      - ./environment
     restart: always
     read_only: true
     tmpfs:
-    - /run
-    - /tmp
+      - /run
+      - /tmp
 volumes:
   weblate-cache: {}
   weblate-data: {}

@@ -4,12 +4,12 @@
 # Weblate setup
 WEBLATE_DEBUG=0
 WEBLATE_LOGLEVEL=INFO
-WEBLATE_SITE_TITLE=Weblate
+WEBLATE_SITE_TITLE=YOOtheme
 WEBLATE_ADMIN_NAME=Weblate Admin
-WEBLATE_ADMIN_EMAIL=weblate@example.com
-WEBLATE_ADMIN_PASSWORD=
-WEBLATE_SERVER_EMAIL=weblate@example.com
-WEBLATE_DEFAULT_FROM_EMAIL=weblate@example.com
+WEBLATE_ADMIN_EMAIL=translate@yootheme.com
+WEBLATE_ADMIN_PASSWORD=translate098123
+WEBLATE_SERVER_EMAIL=translate@yootheme.com
+WEBLATE_DEFAULT_FROM_EMAIL=translate@yootheme.com
 WEBLATE_ALLOWED_HOSTS=*
 WEBLATE_REGISTRATION_OPEN=1
 
@@ -55,11 +55,11 @@ REDIS_HOST=cache
 REDIS_PORT=6379
 
 # Mail server, the server has to listen on port 587 and understand TLS
-WEBLATE_EMAIL_HOST=127.0.0.1
+WEBLATE_EMAIL_HOST=sslout.de
 # Do NOT use quotes here
-WEBLATE_EMAIL_HOST_USER=
+WEBLATE_EMAIL_HOST_USER=translate@yootheme.com
 # Do NOT use quotes here
-WEBLATE_EMAIL_HOST_PASSWORD=
+WEBLATE_EMAIL_HOST_PASSWORD=exTU,djK3cnY
 
 # GitLab lab setup
 # WEBLATE_GITLAB_USERNAME=
