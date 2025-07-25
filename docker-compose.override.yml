@@ -1,0 +1,24 @@
+services:
+  database:
+    container_name: weblate-db
+    volumes:
+      - ~/Webserver/weblate-postgres-data:/var/lib/postgresql/data
+  weblate:
+    container_name: weblate
+    image: weblate/weblate:latest
+    environment:
+      WEBLATE_DEBUG: 0
+      WEBLATE_SITE_TITLE: YOOtheme
+      WEBLATE_EMAIL_HOST: sslout.de
+      WEBLATE_EMAIL_HOST_USER: translate@yootheme.com
+      WEBLATE_EMAIL_HOST_PASSWORD: exTU,djK3cnY
+      WEBLATE_SERVER_EMAIL: translate@yootheme.com
+      WEBLATE_DEFAULT_FROM_EMAIL: translate@yootheme.com
+      WEBLATE_SITE_DOMAIN: translate.yootheme.com
+      WEBLATE_ADMIN_PASSWORD: translate098123
+      WEBLATE_ADMIN_EMAIL: translate@yootheme.com
+    ports:
+      - 8081:8080
+    volumes:
+      - ~/Webserver/weblate-data:/app/data
+      - ~/Webserver/weblate-cache:/app/cache
