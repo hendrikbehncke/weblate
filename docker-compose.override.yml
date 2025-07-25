@@ -2,7 +2,6 @@ services:
   weblate:
     image: weblate/weblate:5.0
     environment:
-      WEBLATE_DEBUG: 0
       WEBLATE_SITE_TITLE: YOOtheme
       WEBLATE_EMAIL_HOST: sslout.de
       WEBLATE_EMAIL_HOST_USER: translate@yootheme.com
